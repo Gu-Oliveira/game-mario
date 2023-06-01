@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: ;
+}
+
+/*
+font-family: 'Roboto', sans-serif;
+font-family: 'Silkscreen', cursive;
+*/
+
+body{
+    background-color: #333;
+}
+
+/* game */
+
+.game-container{
+    width: 100vw;
+    height: 500px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#87ceeb, #e0f6ff)
+}
+
+.tubo{
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    animation: tubo-animacao 2s infinite linear;
+}
+
+.mario{
+    position: absolute;
+    width: 80px;
+    bottom: 0;
+    left: 50px;
+}
+
+.salto{
+    animation: salto-animacao 500ms ease-out;
+}
+
+
+
+/* grama */
+
+.grama{
+    height: 30px;
+    background:linear-gradient(to bottom, rgb(83,255,48), rgb(0,122,4))
+}
+
+/* nuvens */
+.nuvens{
+    position: absolute;
+    width: 400px;
+    animation: nuvens-animacao 20s infinite linear;
+}
+
+
+/* botao de pular */
+
+.btn-container{
+    background-color: ;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse;
+}
+
+.btn-container h3{
+    margin-top: 15px;
+    font-family: 'Silkscreen', cursive;
+    font-size: 14px;
+    color: #7b7b7b;
+}
+
+.btn-pular{
+    padding: 14px 28px;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;;
+    cursor: pointer;
+    background-color: #342fc8;
+    border: 2px solid rgb(16, 16, 135);
+    border-radius: 5px;
+    color: #e2e7ee;
+}
+
+
+
+
+@keyframes tubo-animacao{
+    from{
+        right: -80px;
+    }
+    to{
+        right: 100%;
+    }
+}
+
+@keyframes salto-animacao {
+    0%{
+        bottom: 0;
+    }
+    45%{
+        top: 180px;
+    }
+    50%{
+        bottom: 180px;
+    }
+    55%{
+        bottom: 180px;
+    }
+    100%{
+        bottom: 0;
+    }
+}
+
+@keyframes nuvens-animacao {
+    from{
+        right: -500px;
+    }
+    to{
+        right: 100%;
+    }
+}
+
+@media (max-width: 425px) {
+    .tubo{
+        width: 40px;
+    }
+    
+    .mario{
+        width: 50px;
+        left: 0px;
+    }
+}
